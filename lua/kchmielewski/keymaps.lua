@@ -75,3 +75,6 @@ vim.keymap.set('n', '<leader>fg', "<cmd>Telescope git_files<cr>")
 
 -- search words 
 vim.keymap.set('n', '<leader>fw', "<cmd>Telescope live_grep<cr>")
+
+-- search word under cursor
+vim.keymap.set('n', '<leader>fc', "<cmd>Telescope grep_string<cr>")

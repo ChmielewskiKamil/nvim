@@ -88,4 +88,7 @@ return require('packer').startup(function(use)
 
     -- Pretty Diagnostics LSP lines
     use {'https://git.sr.ht/~whynothugo/lsp_lines.nvim'}
+
+    -- Copilot
+    use {'github/copilot.vim'}
 end)

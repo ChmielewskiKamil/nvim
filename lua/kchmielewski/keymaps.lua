@@ -78,3 +78,8 @@ vim.keymap.set('n', '<leader>fw', "<cmd>Telescope live_grep<cr>")
 
 -- search word under cursor
 vim.keymap.set('n', '<leader>fc', "<cmd>Telescope grep_string<cr>")
+
+-- Bufferline mappings
+vim.keymap.set("n", "<S-l>", "<cmd>:BufferLineCycleNext<CR>", {silent = true})
+vim.keymap.set("n", "<S-h>", "<cmd>:BufferLineCyclePrev<CR>", {silent = true})
+vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", {silent = true})

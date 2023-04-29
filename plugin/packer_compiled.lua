@@ -189,6 +189,11 @@ _G.packer_plugins = {
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-gh-line"] = {
+    loaded = true,
+    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/vim-gh-line",
+    url = "https://github.com/ruanyl/vim-gh-line"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/vim-surround",

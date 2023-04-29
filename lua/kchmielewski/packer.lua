@@ -82,4 +82,7 @@ return require('packer').startup(function(use)
 
     -- Vim Leap
     use {'ggandor/leap.nvim'}
+
+    -- Open line in GitHub
+    use {'ruanyl/vim-gh-line'}
 end)

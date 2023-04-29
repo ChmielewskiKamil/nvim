@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
     url = "https://github.com/VonHeikemen/lsp-zero.nvim"
   },
+  ["lsp_lines.nvim"] = {
+    loaded = true,
+    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/lsp_lines.nvim",
+    url = "https://git.sr.ht/~whynothugo/lsp_lines.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/lualine.nvim",

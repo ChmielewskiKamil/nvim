@@ -85,4 +85,7 @@ return require('packer').startup(function(use)
 
     -- Open line in GitHub
     use {'ruanyl/vim-gh-line'}
+
+    -- Pretty Diagnostics LSP lines
+    use {'https://git.sr.ht/~whynothugo/lsp_lines.nvim'}
 end)

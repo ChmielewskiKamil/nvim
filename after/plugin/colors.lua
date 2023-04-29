@@ -1,10 +1,4 @@
-function ColorMyPencils(color)
-	color = color or "nightfly"
-	vim.cmd.colorscheme(color)
-
-	vim.api.nvim_set_hl(0, "Normal", {bg = "None"})
-	vim.api.nvim_set_hl(0, "NormalFloat", {bg = "None"})
-
+local status, _ = pcall(vim.cmd, "colorscheme nightfly")
+if not status then
+    print("Colorscheme not found!")
 end
-
-ColorMyPencils()

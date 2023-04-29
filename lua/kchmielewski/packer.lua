@@ -77,5 +77,9 @@ return require('packer').startup(function(use)
     -- Buffer line - Bufferline
     use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
 
+    -- Autopairs
     use { 'windwp/nvim-autopairs' }
+
+    -- Vim Leap
+    use {'ggandor/leap.nvim'}
 end)

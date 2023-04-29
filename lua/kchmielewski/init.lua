@@ -1,2 +1,2 @@
 require("kchmielewski.set")
-require("kchmielewski.remap")
+require("kchmielewski.keymaps")

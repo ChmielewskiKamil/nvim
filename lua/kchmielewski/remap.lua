@@ -51,9 +51,6 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Open packer config file to quickly add new plugins
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/kchmielewski/packer.lua<CR>");
 
--- Open Lazygit
--- vim.keymap.set("n", "<leader>gg", "<cmd>TermExec cmd=\"lazygit\"<CR>")
-
 -- Shoutout 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
@@ -65,3 +62,5 @@ vim.keymap.set("n", "<C-h>", "<c-\\><c-n><c-w>h")
 vim.keymap.set("n", "<C-j>", "<c-\\><c-n><c-w>j")
 vim.keymap.set("n", "<C-k>", "<c-\\><c-n><c-w>k")
 vim.keymap.set("n", "<C-l>", "<c-\\><c-n><c-w>l")
+
+-- Lazygit is configured inside the toggleterm.lua

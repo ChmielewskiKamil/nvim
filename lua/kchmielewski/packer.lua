@@ -65,5 +65,11 @@ return require('packer').startup(function(use)
     }
 
     -- Toggleterm for Lazygit
-    use {'akinsho/toggleterm.nvim'}
+    use { 'akinsho/toggleterm.nvim' }
+
+    -- Status line - Lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
 end)

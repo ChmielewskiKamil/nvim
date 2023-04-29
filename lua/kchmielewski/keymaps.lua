@@ -1,4 +1,7 @@
+-- Lazygit is configured inside the toggleterm.lua
+
 vim.g.mapleader = " "
+
 -- Enter netrw 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -63,4 +66,12 @@ vim.keymap.set("n", "<C-j>", "<c-\\><c-n><c-w>j")
 vim.keymap.set("n", "<C-k>", "<c-\\><c-n><c-w>k")
 vim.keymap.set("n", "<C-l>", "<c-\\><c-n><c-w>l")
 
--- Lazygit is configured inside the toggleterm.lua
+-- Telescope
+-- search project files
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+
+-- search git files 
+vim.keymap.set('n', '<leader>fg', "<cmd>Telescope git_files<cr>")
+
+-- search words 
+vim.keymap.set('n', '<leader>fw', "<cmd>Telescope live_grep<cr>")

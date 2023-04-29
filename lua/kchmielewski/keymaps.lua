@@ -2,7 +2,7 @@
 
 vim.g.mapleader = " "
 
--- Enter netrw 
+-- Enter netrw
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move the highlighted text up and down
@@ -54,7 +54,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 -- Open packer config file to quickly add new plugins
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/kchmielewski/packer.lua<CR>");
 
--- Shoutout 
+-- Shoutout
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
@@ -70,16 +70,16 @@ vim.keymap.set("n", "<C-l>", "<c-\\><c-n><c-w>l")
 -- search project files
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 
--- search git files 
+-- search git files
 vim.keymap.set('n', '<leader>fg', "<cmd>Telescope git_files<cr>")
 
--- search words 
+-- search words
 vim.keymap.set('n', '<leader>fw', "<cmd>Telescope live_grep<cr>")
 
 -- search word under cursor
 vim.keymap.set('n', '<leader>fc', "<cmd>Telescope grep_string<cr>")
 
 -- Bufferline mappings
-vim.keymap.set("n", "<S-l>", "<cmd>:BufferLineCycleNext<CR>", {silent = true})
-vim.keymap.set("n", "<S-h>", "<cmd>:BufferLineCyclePrev<CR>", {silent = true})
-vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", {silent = true})
+vim.keymap.set("n", "<S-l>", "<cmd>:BufferLineCycleNext<CR>", { silent = true })
+vim.keymap.set("n", "<S-h>", "<cmd>:BufferLineCyclePrev<CR>", { silent = true })
+vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", { silent = true })

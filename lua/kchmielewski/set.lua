@@ -31,6 +31,8 @@ vim.opt.scrolloff = 8
 
 -- Diagnostics
 vim.opt.signcolumn = "yes"
+
+-- Additional chars in filenames
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50

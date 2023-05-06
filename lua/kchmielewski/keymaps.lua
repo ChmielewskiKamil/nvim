@@ -70,16 +70,23 @@ vim.keymap.set("n", "<C-l>", "<c-\\><c-n><c-w>l")
 -- search project files
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 
--- search git files
+-- Search git files
 vim.keymap.set('n', '<leader>fg', "<cmd>Telescope git_files<cr>")
 
--- search words
+-- Search words
 vim.keymap.set('n', '<leader>fw', "<cmd>Telescope live_grep<cr>")
 
--- search word under cursor
+-- Search word under cursor
 vim.keymap.set('n', '<leader>fc', "<cmd>Telescope grep_string<cr>")
 
 -- Bufferline mappings
 vim.keymap.set("n", "<S-l>", "<cmd>:BufferLineCycleNext<CR>", { silent = true })
 vim.keymap.set("n", "<S-h>", "<cmd>:BufferLineCyclePrev<CR>", { silent = true })
 vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", { silent = true })
+
+-- Copilot mappings
+-- Tab works as well
+vim.keymap.set("i", "<F1>", 'copilot#Accept("<CR>")', {silent = true, expr = true, replace_keycodes = false })
+
+-- Open help in vertical split
+vim.keymap.set("c", "h", "vert help")

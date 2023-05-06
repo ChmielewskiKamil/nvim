@@ -21,6 +21,9 @@ return require('packer').startup(function(use)
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
 
+    -- Treesitter playground
+    use {'nvim-treesitter/playground'}
+
     -- Undotree
     use { 'mbbill/undotree' }
 

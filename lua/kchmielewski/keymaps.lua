@@ -88,5 +88,3 @@ vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", { silent = true })
 -- Tab works as well
 vim.keymap.set("i", "<F1>", 'copilot#Accept("<CR>")', {silent = true, expr = true, replace_keycodes = false })
 
--- Open help in vertical split
-vim.keymap.set("c", "h", "vert help")

@@ -38,7 +38,10 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 -- Visual line at 80 chars
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,120"
 
 -- Hide command line unless needed 
 vim.opt.cmdheight = 0
+
+-- Insert comment leader on new line via <CR> or o
+vim.opt.formatoptions = "jcroql"

@@ -45,3 +45,6 @@ vim.opt.cmdheight = 0
 
 -- Insert comment leader on new line via <CR> or o
 vim.opt.formatoptions = "jcroql"
+
+-- Graphviz default output format
+vim.g.graphviz_output_format = "png"

@@ -88,3 +88,5 @@ vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", { silent = true })
 -- Tab works as well
 vim.keymap.set("i", "<F1>", 'copilot#Accept("<CR>")', {silent = true, expr = true, replace_keycodes = false })
 
+-- Preview currently open Graphviz file
+vim.keymap.set("n", "<leader>gp", "<cmd>Graphviz!<cr>")

@@ -94,4 +94,7 @@ return require('packer').startup(function(use)
 
     -- Copilot
     use {'github/copilot.vim'}
+
+    -- Graphviz compile & preview
+    use {'liuchengxu/graphviz.vim'}
 end)

@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
+  ["graphviz.vim"] = {
+    loaded = true,
+    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/graphviz.vim",
+    url = "https://github.com/liuchengxu/graphviz.vim"
+  },
   ["leap.nvim"] = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/leap.nvim",

@@ -97,4 +97,13 @@ return require('packer').startup(function(use)
 
     -- Graphviz compile & preview
     use {'liuchengxu/graphviz.vim'}
+
+    -- PlantUML
+    use {'aklt/plantuml-syntax'}
+
+    -- Open Browser for PlantUML
+    use {'tyru/open-browser.vim'}
+
+    -- PlantUML Previewer
+    use {'weirongxu/plantuml-previewer.vim'}
 end)

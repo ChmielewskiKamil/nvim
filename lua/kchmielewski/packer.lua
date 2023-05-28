@@ -57,6 +57,9 @@ return require('packer').startup(function(use)
     -- Commenting
     use { 'numToStr/Comment.nvim' }
 
+    -- Icons
+    use {'nvim-tree/nvim-web-devicons', tag = "nerd-v2-compat"}
+
     -- File explorer
     use {
         "nvim-neo-tree/neo-tree.nvim",

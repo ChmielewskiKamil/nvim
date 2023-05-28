@@ -174,10 +174,25 @@ _G.packer_plugins = {
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["open-browser.vim"] = {
+    loaded = true,
+    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/open-browser.vim",
+    url = "https://github.com/tyru/open-browser.vim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["plantuml-previewer.vim"] = {
+    loaded = true,
+    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/plantuml-previewer.vim",
+    url = "https://github.com/weirongxu/plantuml-previewer.vim"
+  },
+  ["plantuml-syntax"] = {
+    loaded = true,
+    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/plantuml-syntax",
+    url = "https://github.com/aklt/plantuml-syntax"
   },
   playground = {
     loaded = true,

@@ -89,4 +89,10 @@ vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", { silent = true })
 vim.keymap.set("i", "<F1>", 'copilot#Accept("<CR>")', {silent = true, expr = true, replace_keycodes = false })
 
 -- Preview currently open Graphviz file
-vim.keymap.set("n", "<leader>gp", "<cmd>Graphviz!<cr>")
+vim.keymap.set("n", "<leader>gp", "<cmd>Graphviz!!<cr>")
+
+-- Preview currently open PlantUML file as PNG
+vim.keymap.set("n", "<leader>up", "<cmd>!plantuml % && open %:r.png<cr>", { silent = true })
+
+-- Preview currently open PlantUML file as SVG
+vim.keymap.set("n", "<leader>us", "<cmd>!plantuml % -Tsvg && open %:r.svg<cr>", { silent = true })

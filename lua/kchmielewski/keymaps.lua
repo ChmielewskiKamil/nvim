@@ -83,6 +83,7 @@ vim.keymap.set('n', '<leader>fc', "<cmd>Telescope grep_string<cr>")
 vim.keymap.set("n", "<S-l>", "<cmd>:BufferLineCycleNext<CR>", { silent = true })
 vim.keymap.set("n", "<S-h>", "<cmd>:BufferLineCyclePrev<CR>", { silent = true })
 vim.keymap.set("n", "<leader>c", "<cmd>:bdelete<CR>", { silent = true })
+vim.keymap.set("n", "<leader>bp", "<cmd>:BufferLineTogglePin<CR>", { silent = true })
 
 -- Copilot mappings
 -- Tab works as well

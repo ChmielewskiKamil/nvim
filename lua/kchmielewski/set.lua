@@ -10,6 +10,11 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 
+-- Code folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldnestmax = 2
+vim.opt.foldtext = "."
+
 -- Line wrapping
 vim.opt.wrap = false
 

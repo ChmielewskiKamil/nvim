@@ -59,7 +59,7 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 require('lspconfig').cairo_ls.setup({
-    cmd = {'scarb', 'cairo-language-server'},
+    cmd = { 'scarb', 'cairo-language-server' },
 })
 
 lsp.setup()

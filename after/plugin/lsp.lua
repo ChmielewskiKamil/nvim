@@ -1,18 +1,20 @@
 local lsp = require('lsp-zero').preset({ "recommended" })
+local util = require('lspconfig.util')
 
 lsp.ensure_installed({
     'tsserver',
     'eslint',
     'rust_analyzer',
-    'cairo_ls',
 })
 
 lsp.use('solidity', {
     cmd = { 'nomicfoundation-solidity-language-server', '--stdio' },
     filetypes = { 'solidity' },
-    root_dir = require("lspconfig.util").find_git_ancestor,
+    root_dir = util.find_git_ancestor,
     single_file_support = true,
 })
+
+
 
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
@@ -59,8 +61,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
-
-require('lspconfig').cairo_ls.setup({})
 
 vim.diagnostic.config({
     virtual_text = true

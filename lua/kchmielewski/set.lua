@@ -53,3 +53,8 @@ vim.opt.formatoptions = "jcroql"
 
 -- Graphviz default output format
 vim.g.graphviz_output_format = "png"
+
+-- Markdown Preview
+vim.g.mkdp_auto_start = 0
+vim.g.mkdp_auto_close = 0
+vim.g.mkdp_combine_preview = 1

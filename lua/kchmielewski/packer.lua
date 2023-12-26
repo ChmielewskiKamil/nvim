@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
     use { 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } }
 
     -- Treesitter playground
-    use {'nvim-treesitter/playground'}
+    use { 'nvim-treesitter/playground' }
 
     -- Undotree
     use { 'mbbill/undotree' }
@@ -50,6 +50,10 @@ return require('packer').startup(function(use)
         }
     }
 
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
     -- Vim surround
     -- Examples are great: https://github.com/tpope/vim-surround
     use { 'tpope/vim-surround' }
@@ -58,7 +62,7 @@ return require('packer').startup(function(use)
     use { 'numToStr/Comment.nvim' }
 
     -- Icons
-    use {'nvim-tree/nvim-web-devicons', tag = "nerd-v2-compat"}
+    use { 'nvim-tree/nvim-web-devicons', tag = "nerd-v2-compat" }
 
     -- File explorer
     use {
@@ -87,26 +91,29 @@ return require('packer').startup(function(use)
     use { 'windwp/nvim-autopairs' }
 
     -- Vim Leap
-    use {'ggandor/leap.nvim'}
+    use { 'ggandor/leap.nvim' }
 
     -- Open line in GitHub
-    use {'ruanyl/vim-gh-line'}
+    use { 'ruanyl/vim-gh-line' }
 
     -- Pretty Diagnostics LSP lines
-    use {'https://git.sr.ht/~whynothugo/lsp_lines.nvim'}
+    use { 'https://git.sr.ht/~whynothugo/lsp_lines.nvim' }
 
     -- Copilot
-    use {'github/copilot.vim'}
+    use { 'github/copilot.vim' }
 
     -- Graphviz compile & preview
-    use {'liuchengxu/graphviz.vim'}
+    use { 'liuchengxu/graphviz.vim' }
 
     -- PlantUML
-    use {'aklt/plantuml-syntax'}
+    use { 'aklt/plantuml-syntax' }
 
     -- Open Browser for PlantUML
-    use {'tyru/open-browser.vim'}
+    use { 'tyru/open-browser.vim' }
 
     -- PlantUML Previewer
-    use {'weirongxu/plantuml-previewer.vim'}
+    use { 'weirongxu/plantuml-previewer.vim' }
+
+    -- Linting
+    use {'mfussenegger/nvim-lint'}
 end)

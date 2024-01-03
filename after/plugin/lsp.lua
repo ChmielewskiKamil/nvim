@@ -1,26 +1,55 @@
-local lsp = require('lsp-zero').preset({ "recommended" })
-
-lsp.ensure_installed({
-    'tsserver',
-    'eslint',
-    'rust_analyzer',
-    'cairo_ls',
+local lsp_zero = require('lsp-zero').preset({ "recommended" })
+require('mason').setup()
+require('mason-lspconfig').setup({
+    ensure_installed = {
+        'tsserver',
+        'eslint',
+        'rust_analyzer',
+        'cairo_ls',
+        'gopls',
+        'html'
+    },
+    handlers = {
+        lsp_zero.default_setup,
+    }
 })
 
-lsp.use('solidity', {
+require('lspconfig').gopls.setup {
+    filetypes = { "go", "gomod", "gowork", "gotmpl", "gohtml", "tmpl" },
+    settings = {
+        gopls = {
+            templateExtensions = { "gohtml", "tmpl" },
+            analyses = {
+                unreachable = true,
+                unusedparams = true
+            }
+        }
+    }
+}
+
+require('lspconfig').emmet_language_server.setup {
+    filetypes = { "html", "css", "javascript", "tmpl" },
+}
+
+lsp_zero.use('solidity', {
     cmd = { 'nomicfoundation-solidity-language-server', '--stdio' },
     filetypes = { 'solidity' },
-    root_dir = require("lspconfig.util").root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml", "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
+    root_dir = require("lspconfig.util").root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml",
+        "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
     single_file_support = true,
 })
 
+require('lspconfig').cairo_ls.setup({
+    cmd = { 'scarb', 'cairo-language-server' },
+})
+
 -- Fix Undefined global 'vim'
-lsp.nvim_workspace()
+lsp_zero.nvim_workspace()
 
 -- Autocompletion settings
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
-local cmp_mappings = lsp.defaults.cmp_mappings({
+local cmp_mappings = lsp_zero.defaults.cmp_mappings({
     ['<C-k>'] = cmp.mapping.select_prev_item(cmp_select),
     ['<C-j>'] = cmp.mapping.select_next_item(cmp_select),
     ['<C-y>'] = cmp.mapping.confirm({ select = true }),
@@ -29,11 +58,11 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 cmp_mappings['<Tab>'] = nil
 cmp_mappings['<S-Tab>'] = nil
 
-lsp.setup_nvim_cmp({
+lsp_zero.setup_nvim_cmp({
     mapping = cmp_mappings
 })
 
-lsp.set_preferences({
+lsp_zero.set_preferences({
     suggest_lsp_servers = false,
     sign_icons = {
         error = 'E',
@@ -43,8 +72,8 @@ lsp.set_preferences({
     }
 })
 
-lsp.on_attach(function(client, bufnr)
-    local opts = { buffer = bufnr, remap = false}
+lsp_zero.on_attach(function(client, bufnr)
+    local opts = { buffer = bufnr, remap = false }
 
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
@@ -59,11 +88,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
 end)
 
-require('lspconfig').cairo_ls.setup({
-    cmd = { 'scarb', 'cairo-language-server' },
-})
-
-lsp.setup()
+lsp_zero.setup()
 
 vim.diagnostic.config({
     virtual_text = true

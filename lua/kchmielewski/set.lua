@@ -58,3 +58,6 @@ vim.g.graphviz_output_format = "png"
 vim.g.mkdp_auto_start = 0
 vim.g.mkdp_auto_close = 0
 vim.g.mkdp_combine_preview = 1
+
+vim.filetype.add({ extension = { templ = "templ" } })
+vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = vim.lsp.buf.format })

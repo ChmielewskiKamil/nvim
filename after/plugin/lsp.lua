@@ -7,7 +7,10 @@ require('mason-lspconfig').setup({
         'rust_analyzer',
         'cairo_ls',
         'gopls',
-        'html'
+        'html',
+        'templ',
+        'htmx',
+        'tailwindcss',
     },
     handlers = {
         lsp_zero.default_setup,
@@ -28,8 +31,21 @@ require('lspconfig').gopls.setup {
 }
 
 require('lspconfig').emmet_language_server.setup {
-    filetypes = { "html", "css", "javascript", "tmpl" },
+    filetypes = { "html", "css", "javascript", "templ" },
 }
+
+require('lspconfig').html.setup {
+    filetypes = { "html", "templ" },
+}
+
+require('lspconfig').htmx.setup {
+    filetypes = { "html", "templ" },
+}
+
+require('lspconfig').tailwindcss.setup({
+    filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+    init_options = { userLanguages = { templ = "html" } },
+})
 
 lsp_zero.use('solidity', {
     cmd = { 'nomicfoundation-solidity-language-server', '--stdio' },
@@ -41,6 +57,19 @@ lsp_zero.use('solidity', {
 
 require('lspconfig').cairo_ls.setup({
     cmd = { 'scarb', 'cairo-language-server' },
+})
+
+lsp_zero.format_on_save({
+  format_opts = {
+    async = false,
+    timeout_ms = 10000,
+  },
+  servers = {
+    ['tsserver'] = {'javascript', 'typescript'},
+    ['rust_analyzer'] = {'rust'},
+    ['gopls'] = {'go'},
+    ['html'] = {'html'},
+  }
 })
 
 -- Fix Undefined global 'vim'

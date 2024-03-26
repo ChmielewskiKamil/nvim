@@ -116,4 +116,7 @@ return require('packer').startup(function(use)
 
     -- Linting
     use {'mfussenegger/nvim-lint'}
+
+    -- Activity Watcher
+    use {'ActivityWatch/aw-watcher-vim'}
 end)

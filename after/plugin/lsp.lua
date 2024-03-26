@@ -43,7 +43,7 @@ require('lspconfig').htmx.setup {
 }
 
 require('lspconfig').tailwindcss.setup({
-    filetypes = { "templ", "astro", "javascript", "typescript", "react" },
+    filetypes = { "templ", "astro", "javascript", "typescript", "react", "html" },
     init_options = { userLanguages = { templ = "html" } },
 })
 
@@ -69,6 +69,7 @@ lsp_zero.format_on_save({
     ['rust_analyzer'] = {'rust'},
     ['gopls'] = {'go'},
     ['html'] = {'html'},
+    ['templ'] = {'templ'},
   }
 })
 

@@ -32,7 +32,7 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- Disable recording macros lol
-vim.keymap.set("n", "Q", "<nop>")
+-- vim.keymap.set("n", "Q", "<nop>")
 
 -- Lsp format text
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)

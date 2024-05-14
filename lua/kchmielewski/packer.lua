@@ -115,8 +115,33 @@ return require('packer').startup(function(use)
     use { 'weirongxu/plantuml-previewer.vim' }
 
     -- Linting
-    use {'mfussenegger/nvim-lint'}
+    use { 'mfussenegger/nvim-lint' }
 
     -- Activity Watcher
-    use {'ActivityWatch/aw-watcher-vim'}
+    use { 'ActivityWatch/aw-watcher-vim' }
+
+    -- Debugger
+    use { 'mfussenegger/nvim-dap' }
+
+    -- Debugger (support for Go's Delve debugger)
+    use { 'leoluz/nvim-dap-go',
+        ft = "go", dependencies = "mfussenegger/nvim-dap",
+        config = function()
+            require("dap-go").setup()
+        end
+    }
+
+    use { 'rcarriga/nvim-dap-ui',
+        requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
+        config = function()
+            require("dapui").setup()
+        end,
+
+    }
+
+    use { 'theHamsta/nvim-dap-virtual-text',
+        config = function()
+            require("nvim-dap-virtual-text").setup()
+        end
+    }
 end)

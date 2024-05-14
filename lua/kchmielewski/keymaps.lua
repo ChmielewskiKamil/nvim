@@ -97,3 +97,24 @@ vim.keymap.set("n", "<leader>up", "<cmd>!plantuml % && open %:r.png<cr>", { sile
 
 -- Preview currently open PlantUML file as SVG
 vim.keymap.set("n", "<leader>us", "<cmd>!plantuml % -Tsvg && open %:r.svg<cr>", { silent = true })
+
+-- Go Debugger
+
+-- Toggle Breakpoint
+vim.keymap.set("n", "<leader>b", ":lua require'dap'.toggle_breakpoint()<CR>")
+vim.keymap.set("n", "<leader>B", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+
+vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<F2>", ":lua require'dap'.step_into()<CR>")
+vim.keymap.set("n", "<F3>", ":lua require'dap'.step_over()<CR>")
+vim.keymap.set("n", "<F4>", ":lua require'dap'.step_out()<CR>")
+
+-- Debug Go Test (nearest to the cursor)
+vim.keymap.set("n", "<leader>dgt", function ()
+    require('dap-go').debug_test()
+end)
+
+-- Debug Latest Go Test (the one run previously)
+vim.keymap.set("n", "<leader>dgl", function ()
+    require('dap-go').debug_last_test()
+end)

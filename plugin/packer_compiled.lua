@@ -99,16 +99,6 @@ _G.packer_plugins = {
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
-  ["copilot.vim"] = {
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/copilot.vim",
-    url = "https://github.com/github/copilot.vim"
-  },
-  ["graphviz.vim"] = {
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/graphviz.vim",
-    url = "https://github.com/liuchengxu/graphviz.vim"
-  },
   ["leap.nvim"] = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/leap.nvim",
@@ -169,31 +159,6 @@ _G.packer_plugins = {
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-go"] = {
-    config = { "\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vdap-go\frequire\0" },
-    loaded = false,
-    needs_bufread = false,
-    only_cond = false,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/opt/nvim-dap-go",
-    url = "https://github.com/leoluz/nvim-dap-go"
-  },
-  ["nvim-dap-ui"] = {
-    config = { "\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ndapui\frequire\0" },
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-dap-virtual-text"] = {
-    config = { "\27LJ\2\nC\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\26nvim-dap-virtual-text\frequire\0" },
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
-    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
-  },
   ["nvim-lint"] = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-lint",
@@ -203,11 +168,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-nio"] = {
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-nio",
-    url = "https://github.com/nvim-neotest/nvim-nio"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -219,25 +179,10 @@ _G.packer_plugins = {
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
-  ["open-browser.vim"] = {
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/open-browser.vim",
-    url = "https://github.com/tyru/open-browser.vim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["plantuml-previewer.vim"] = {
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/plantuml-previewer.vim",
-    url = "https://github.com/weirongxu/plantuml-previewer.vim"
-  },
-  ["plantuml-syntax"] = {
-    loaded = true,
-    path = "/Users/kamilchmielewski/.local/share/nvim/site/pack/packer/start/plantuml-syntax",
-    url = "https://github.com/aklt/plantuml-syntax"
   },
   playground = {
     loaded = true,
@@ -282,21 +227,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-dap-ui
-time([[Config for nvim-dap-ui]], true)
-try_loadstring("\27LJ\2\n3\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\ndapui\frequire\0", "config", "nvim-dap-ui")
-time([[Config for nvim-dap-ui]], false)
--- Config for: nvim-dap-virtual-text
-time([[Config for nvim-dap-virtual-text]], true)
-try_loadstring("\27LJ\2\nC\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\26nvim-dap-virtual-text\frequire\0", "config", "nvim-dap-virtual-text")
-time([[Config for nvim-dap-virtual-text]], false)
-vim.cmd [[augroup packer_load_aucmds]]
-vim.cmd [[au!]]
-  -- Filetype lazy-loads
-time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType go ++once lua require("packer.load")({'nvim-dap-go'}, { ft = "go" }, _G.packer_plugins)]]
-time([[Defining lazy-load filetype autocommands]], false)
-vim.cmd("augroup END")
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

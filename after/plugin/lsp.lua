@@ -17,6 +17,8 @@ require('mason-lspconfig').setup({
     }
 })
 
+local configs = require 'lspconfig.configs'
+
 require('lspconfig').gopls.setup {
     filetypes = { "go", "gomod", "gowork", "gotmpl", "gohtml", "tmpl" },
     settings = {
@@ -47,30 +49,49 @@ require('lspconfig').tailwindcss.setup({
     init_options = { userLanguages = { templ = "html" } },
 })
 
-lsp_zero.use('solidity', {
-    cmd = { 'nomicfoundation-solidity-language-server', '--stdio' },
-    filetypes = { 'solidity' },
-    root_dir = require("lspconfig.util").root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml",
-        "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
-    single_file_support = true,
-})
+-- if not configs.solbot_lsp then
+--     configs.solbot_lsp = {
+--         default_config = {
+--             cmd = { "/Users/kamilchmielewski/Projects/solbot/solbot" },
+--             filetypes = { "solidity" },
+--             root_dir = require("lspconfig.util").root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml",
+--                 "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
+--         },
+--     }
+-- end
+--
+-- require('lspconfig').solbot_lsp.setup {}
+
+if not configs.hardhat_lsp then
+    configs.hardhat_lsp = {
+        default_config = {
+            cmd = { 'nomicfoundation-solidity-language-server', '--stdio' },
+            filetypes = { 'solidity' },
+            root_dir = require("lspconfig.util").root_pattern("hardhat.config.js", "hardhat.config.ts", "foundry.toml",
+                "remappings.txt", "truffle.js", "truffle-config.js", "ape-config.yaml", ".git", "package.json"),
+            single_file_support = true,
+        },
+    }
+end
+
+require('lspconfig').hardhat_lsp.setup {}
 
 require('lspconfig').cairo_ls.setup({
     cmd = { 'scarb', 'cairo-language-server' },
 })
 
 lsp_zero.format_on_save({
-  format_opts = {
-    async = false,
-    timeout_ms = 10000,
-  },
-  servers = {
-    ['tsserver'] = {'javascript', 'typescript'},
-    ['rust_analyzer'] = {'rust'},
-    ['gopls'] = {'go'},
-    ['html'] = {'html'},
-    ['templ'] = {'templ'},
-  }
+    format_opts = {
+        async = false,
+        timeout_ms = 10000,
+    },
+    servers = {
+        ['tsserver'] = { 'javascript', 'typescript' },
+        ['rust_analyzer'] = { 'rust' },
+        ['gopls'] = { 'go' },
+        ['html'] = { 'html' },
+        ['templ'] = { 'templ' },
+    }
 })
 
 -- Fix Undefined global 'vim'

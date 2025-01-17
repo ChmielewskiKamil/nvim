@@ -45,6 +45,14 @@ vim.opt.updatetime = 50
 -- Visual line at 80 chars
 vim.opt.colorcolumn = "80,120"
 
+-- Actual break at 80 chars for markdown files
+vim.api.nvim_create_autocmd('BufWinEnter', {
+  pattern = { '*.md' },
+  callback = function()
+    vim.opt.textwidth = 80
+  end,
+})
+
 -- Hide command line unless needed 
 vim.opt.cmdheight = 0
 
@@ -61,3 +69,5 @@ vim.g.mkdp_combine_preview = 1
 
 vim.filetype.add({ extension = { templ = "templ" } })
 vim.api.nvim_create_autocmd({ "BufWritePre" }, { pattern = { "*.templ" }, callback = vim.lsp.buf.format })
+
+vim.filetype.add({ extension = { noir = "nr" } })
